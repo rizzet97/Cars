@@ -26,3 +26,23 @@ int main()
     toyota.charge();
     toyota.refuel();
 }
+
+// NEW FILES: car.hpp engine.hpp
+
+// obecnie:
+// Petrol Engine <----- Petrol Car
+// Electric Engine <----- Electric Car
+// Petrol Engine <---------- Hybrid Car
+// Electric Engine <------/
+
+// Docelowo:
+// class Engine
+    // class PetrolEngine : public Engine
+    // class ElectricEngine : public Engine
+    // class HybridEngine : public PetrolEngine
+    //                    , public ElectricEngine
+// class Car
+    // class PetrolCar : public Car
+    // class ElectricCar : public Car
+    // class HybridCar : public PetrolCar
+    //                 : public ElectricCar
