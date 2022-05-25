@@ -16,7 +16,8 @@ int main()
     ElectricCar nissan(new ElectricEngine(130, 650));
     nissan.charge();
     nissan.accelerate(80);
-    nissan.engine_ = new ElectricEngine(150, 700);  // Changing an engine during driving is not safe
+    // nissan.engine_ = new ElectricEngine(150, 700);  // Changing an engine during driving is not safe
+    nissan.changeEngine(new ElectricEngine(150, 700));
     nissan.turnLeft();
 
     std::cout << std::endl << "TOYOTA" << std::endl;
@@ -26,23 +27,3 @@ int main()
     toyota.charge();
     toyota.refuel();
 }
-
-// NEW FILES: car.hpp engine.hpp
-
-// obecnie:
-// Petrol Engine <----- Petrol Car
-// Electric Engine <----- Electric Car
-// Petrol Engine <---------- Hybrid Car
-// Electric Engine <------/
-
-// Docelowo:
-// class Engine
-    // class PetrolEngine : public Engine
-    // class ElectricEngine : public Engine
-    // class HybridEngine : public PetrolEngine
-    //                    , public ElectricEngine
-// class Car
-    // class PetrolCar : public Car
-    // class ElectricCar : public Car
-    // class HybridCar : public PetrolCar
-    //                 : public ElectricCar

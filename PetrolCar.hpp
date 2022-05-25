@@ -8,7 +8,7 @@ public:
     PetrolCar(PetrolEngine* engine);
     ~PetrolCar();
     void refuel();
-
+private:
     PetrolEngine* engine_;
 };
 

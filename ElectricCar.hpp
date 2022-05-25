@@ -8,7 +8,8 @@ public:
     ElectricCar(ElectricEngine* engine);
     ~ElectricCar();
     void charge();
-
+    void changeEngine(ElectricEngine* ee);
+private:
     ElectricEngine* engine_;
 };
 
