@@ -7,8 +7,10 @@ class PetrolCar : virtual public Car
 public:
     PetrolCar(PetrolEngine* engine);
     ~PetrolCar();
-    void refuel();
+    void refill() override;
+    void changeEngine(PetrolEngine* engine);
 private:
+    void refuel();
     PetrolEngine* engine_;
 };
 

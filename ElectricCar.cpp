@@ -14,3 +14,6 @@ void ElectricCar::changeEngine(ElectricEngine* engine) {
     engine_ = engine;
 }
 
+void ElectricCar::refill() {
+    charge();
+}
